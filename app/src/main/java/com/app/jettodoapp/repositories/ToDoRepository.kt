@@ -2,9 +2,11 @@ package com.app.jettodoapp.repositories
 
 import com.app.jettodoapp.data.TodoDao
 import com.app.jettodoapp.data.models.ToDoTask
+import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
+@ViewModelScoped
 class ToDoRepository @Inject constructor(private val todoDao: TodoDao) {
     val getAllTasks: Flow<List<ToDoTask>> = todoDao.getAllTasks()
     val sortByLowPriority: Flow<List<ToDoTask>> = todoDao.sortByLowPriority()

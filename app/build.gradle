@@ -70,6 +70,9 @@ dependencies {
     //noinspection GradleDependency
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
 
+//    Navigation Compose
+    implementation "androidx.navigation:navigation-compose:2.5.3"
+
 //    Room components
     implementation "androidx.room:room-runtime:2.4.3"
     kapt "androidx.room:room-compiler:2.4.3"
